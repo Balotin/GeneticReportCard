@@ -1,0 +1,28 @@
+<project name="AnalysisCommon" default="build" basedir=".">
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    
+    <target depends="init" name="build-project">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" 
+               includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath>
+                <pathelement location="lib/commons-logging-1.1.1.jar"/>
+            </classpath>
+        </javac>
+    </target>
+</project>
