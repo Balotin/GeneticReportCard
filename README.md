@@ -13,7 +13,7 @@ ant build
 cd ../SequencingReadsAnalysis
 ant build
 
-# Define project directories (no spaces around '=')
+# Define project directories 
 export GRCC=/home/student/GeneticReportCard/AnalysisCommon
 export GRCA=/home/student/GeneticReportCard/SequencingReadsAnalysis
 
