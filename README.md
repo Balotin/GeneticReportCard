@@ -17,7 +17,7 @@ ant build
 export GRCC=/home/student/GeneticReportCard/AnalysisCommon
 export GRCA=/home/student/GeneticReportCard/SequencingReadsAnalysis
 
-# Set the CLASSPATH variable by concatenating required paths and jar files
+# Set the CLASSPATH variable 
 export CLASSPATH=$GRCA/bin:$GRCC/bin:\
 $GRCC/lib/commons-logging-1.1.1.jar:\
 $GRCA/lib/apache-ant-1.8.2-bzip2.jar:\
